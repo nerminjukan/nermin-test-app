@@ -1,23 +1,33 @@
-<div class="container" style="text-align: center;">
-  <div class="row">
-    <div class="col-xs-12">
-      <img
-        [src]="user.avatar"
-        alt="{{ user.first_name }}"
-        class="img img-responsive"
-        style="max-height: 300px;">
-    </div>
-</div>
-<div class="row">
-    <div class="col-xs-12">
-      <h1>{{ user.first_name }} {{ user.last_name }}</h1>
-    </div>
-</div>
-<div class="row">
-    <div class="col-xs-12">
-      <h3>{{ user.email }}</h3>
-    </div>
-</div>
+
+
+<div class="container" style="height: 90vh;">
+  <div class="row align-items-center h-100">
+      <div class="col-6 mx-auto">
+          <div class="jumbotron" style="text-align: center;">
+            <div class="container" style="text-align: center;">
+              <div class="row">
+                <div class="col-xs-12">
+                  <img
+                    [src]="user.avatar"
+                    alt="{{ user.first_name }}"
+                    class="img img-responsive"
+                    style="max-height: 300px;">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-11">
+                  <h1>{{ user.first_name }} {{ user.last_name }}</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                  <h3>{{ user.email }}</h3>
+                </div>
+            </div>
+            </div>
+          </div>
+      </div>
+  </div>
 </div>
 
 
