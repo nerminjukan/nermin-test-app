@@ -2,11 +2,13 @@
     "nav.title": "Testna aplikacija",
     "nav.login": "Prijava",
     "nav.logout": "Odjava",
+    "nav.home": "Domov",
     "nav.register": "Registracija",
     "nav.list": "Seznam uporabnikov",
     "nav.auth": "Avtentikacija",
     "detail.start": "Prosimo izberite uporabnika za podroben pregled.",
     "auth.email": "E-Pošta",
     "auth.passwd": "Geslo",
-    "auth.switch": "Preklopi na "
+    "auth.switch": "Preklopi na ",
+    "home.desc": "To je <u><b>Angular</b></u> testna aplikacija!"
   }

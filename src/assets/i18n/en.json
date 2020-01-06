@@ -1,6 +1,7 @@
 {
     "nav.title": "Test app",
     "nav.login": "Login",
+    "nav.home": "Home",
     "nav.logout": "Log out",
     "nav.register": "Sign up",
     "nav.list": "Users list",
@@ -8,5 +9,6 @@
     "detail.start": "Please select a user to view detailed information.",
     "auth.email": "E-Mail",
     "auth.passwd": "Password",
-    "auth.switch": "Switch to "
+    "auth.switch": "Switch to ",
+    "home.desc": "This is an <u><b>Angular</b></u> test application!"
   }

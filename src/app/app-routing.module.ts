@@ -7,9 +7,11 @@ import { UsersDetailComponent } from './users/users-detail/users-detail.componen
 import { UsersComponent } from './users/users.component';
 import { UsersResolverService } from './users/users-resolver.service';
 import { AuthGuard } from './auth/auth.guard';
+import { HomeComponent } from './home/home.component';
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: '/users', pathMatch: 'full'},
+  { path: '', redirectTo: '/home', pathMatch: 'full'},
+  { path: 'home', component: HomeComponent},
   { path: 'users', component: UsersComponent, canActivate: [AuthGuard], children: [
     { path: '', component: UsersListStartComponent },
     { path: ':id', component: UsersDetailComponent, resolve: [UsersResolverService] },

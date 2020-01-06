@@ -1,10 +1,11 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-    <a class="navbar-brand">{{'nav.title' | translate}}</a>
+    <a class="navbar-brand" routerLink="/home">{{'nav.title' | translate}}</a>
     <div class="container">
       <div class="navbar-nav">
+        <a class="nav-item nav-link" routerLinkActive="active" routerLink="/home">{{'nav.home' | translate}}</a>
+        <a class="nav-item nav-link" routerLinkActive="active" routerLink="/users" *ngIf="isAuthenticated">{{'nav.list' | translate}}</a>
         <a class="nav-item nav-link" routerLinkActive="active" *ngIf="isAuthenticated" (click)="onLogout()">{{'nav.logout' | translate}}</a>
         <a class="nav-item nav-link" routerLinkActive="active" routerLink="/auth" *ngIf="!isAuthenticated">{{'nav.auth' | translate}}</a>
-        <a class="nav-item nav-link" routerLinkActive="active" routerLink="/users" *ngIf="isAuthenticated">{{'nav.list' | translate}}</a>
       </div>
       <div class="container btn-group col-md-2">
         <button class="btn btn-sm btn-primary" (click)="useLanguage('en')">en</button>
