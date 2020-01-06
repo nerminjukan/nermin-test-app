@@ -7,7 +7,6 @@ import { throwError, BehaviorSubject } from 'rxjs';
 import { ActiveUser } from './activeUser.model';
 
 export interface AuthResponseData {
-  id: number;
   token: string;
 }
 
@@ -31,7 +30,6 @@ export class AuthService {
         catchError(this.handleError),
         tap(resData => {
           this.handleAuthentication(
-            +resData.id,
             resData.token
           );
         })
@@ -52,7 +50,6 @@ export class AuthService {
         catchError(this.handleError),
         tap(resData => {
           this.handleAuthentication(
-            +resData.id,
             resData.token
           );
         })
@@ -61,16 +58,14 @@ export class AuthService {
 
   autoLogin() {
     const userData: {
-      id: number;
-      token: string;
+      userToken: string;
     } = JSON.parse(localStorage.getItem('userData'));
     if (!userData) {
       return;
     }
 
     const loadedUser = new ActiveUser(
-      userData.id,
-      userData.token,
+      userData.userToken,
     );
 
     if (loadedUser.token) {
@@ -86,10 +81,9 @@ export class AuthService {
 
 
   private handleAuthentication(
-    userId: number,
     token: string
   ) {
-    const user = new ActiveUser(userId, token);
+    const user = new ActiveUser(token);
     this.user.next(user);
     localStorage.setItem('userData', JSON.stringify(user));
   }
