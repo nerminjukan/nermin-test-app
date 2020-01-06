@@ -14,6 +14,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
   isAuthenticated = false;
   private userSub: Subscription;
 
+  currentLang: string;
+
+
   constructor(private usersService: UsersService,
               private dataStorageService: DataStorageService,
               private authService: AuthService,
@@ -25,6 +28,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
       console.log(!user);
       console.log(!!user);
     });
+
+    this.currentLang = this.translate.getDefaultLang();
+    console.log(this.currentLang);
+
   }
 
   logUsers() {
@@ -37,6 +44,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   useLanguage(language: string) {
     this.translate.use(language);
+    this.currentLang = language;
   }
 
   ngOnDestroy() {

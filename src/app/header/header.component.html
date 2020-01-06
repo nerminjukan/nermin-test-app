@@ -8,8 +8,10 @@
         <a class="nav-item nav-link" routerLinkActive="active" routerLink="/auth" *ngIf="!isAuthenticated">{{'nav.auth' | translate}}</a>
       </div>
       <div class="container btn-group col-md-2">
-        <button class="btn btn-sm btn-primary" (click)="useLanguage('en')">en</button>
-        <button class="btn btn-sm btn-primary" (click)="useLanguage('si')">si</button>
+        <div class="dropdown">
+          <button class="btn btn-sm btn-primary" [class.btn-success]="this.currentLang == 'en'" (click)="useLanguage('en')">en</button>
+          <button class="btn btn-sm btn-primary" [class.btn-success]="this.currentLang == 'si'" (click)="useLanguage('si')">si</button>
+        </div>
       </div>
     </div>
   </nav>
