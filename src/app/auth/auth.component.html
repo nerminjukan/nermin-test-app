@@ -8,23 +8,23 @@
     </div>
       <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
         <div class="form-group">
-          <label for="email">E-Mail</label>
+          <label for="email">{{'auth.email' | translate}}</label>
           <input type="email" id="email" class="form-control" ngModel name="email" required email
           />
         </div>
         <div class="form-group">
-          <label for="password">Password</label>
+          <label for="password">{{'auth.passwd' | translate}}</label>
           <input type="password" id="password" class="form-control" ngModel name="password" required minlength="6"
           />
         </div>
         <div>
           <button class="btn btn-primary" type="submit" [disabled]="!authForm.valid"
           >
-            {{ isLoginMode ? 'Login' : 'Sign Up' }}
+            {{ isLoginMode ? ('nav.login' | translate) : ('nav.register' | translate) }}
           </button>
           |
           <button class="btn btn-primary" (click)="switchMode()" type="button">
-            Switch to {{ isLoginMode ? 'Sign Up' : 'Login' }}
+            {{'auth.switch' | translate}} {{ isLoginMode ? ('nav.register' | translate) : ('nav.login' | translate) }}
           </button>
         </div>
       </form>

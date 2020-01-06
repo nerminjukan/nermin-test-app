@@ -1,0 +1,12 @@
+{
+    "nav.title": "Test app",
+    "nav.login": "Login",
+    "nav.logout": "Log out",
+    "nav.register": "Sign up",
+    "nav.list": "Users list",
+    "nav.auth": "Authenticate",
+    "detail.start": "Please select a user to view detailed information.",
+    "auth.email": "E-Mail",
+    "auth.passwd": "Password",
+    "auth.switch": "Switch to "
+  }

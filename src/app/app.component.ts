@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from './auth/auth.service';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,10 @@ export class AppComponent implements OnInit {
 
   title = 'nermin-test-app';
 
-  constructor(private authService: AuthService) {}
+
+  constructor(private translate: TranslateService, private authService: AuthService) {
+    translate.setDefaultLang('en');
+  }
 
   ngOnInit (){
     this.authService.autoLogin();

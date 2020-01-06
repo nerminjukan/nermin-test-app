@@ -3,6 +3,7 @@ import { UsersService } from '../users/users.service';
 import { Subscription } from 'rxjs';
 import { DataStorageService } from '../shared/data-storage.service';
 import { AuthService } from '../auth/auth.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -15,7 +16,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   constructor(private usersService: UsersService,
               private dataStorageService: DataStorageService,
-              private authService: AuthService) { }
+              private authService: AuthService,
+              private translate: TranslateService) { }
 
   ngOnInit() {
     this.userSub = this.authService.user.subscribe(user => {
@@ -31,6 +33,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   onLogout() {
     this.authService.logout();
+  }
+
+  useLanguage(language: string) {
+    this.translate.use(language);
   }
 
   ngOnDestroy() {

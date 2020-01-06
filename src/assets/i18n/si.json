@@ -1,0 +1,12 @@
+{
+    "nav.title": "Testna palikacija",
+    "nav.login": "Prijava",
+    "nav.logout": "Odjava",
+    "nav.register": "Registracija",
+    "nav.list": "Seznam uporabnikov",
+    "nav.auth": "Avtentikacija",
+    "detail.start": "Prosimo izberite uporabnika za podroben pregled.",
+    "auth.email": "E-Pošta",
+    "auth.passwd": "Geslo",
+    "auth.switch": "Preklopi na "
+  }
